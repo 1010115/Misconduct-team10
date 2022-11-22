@@ -26,6 +26,8 @@ Route::get('/users', [App\Http\Controllers\UsersController::class, 'index'])->na
 
 Route::get('/create', [App\Http\Controllers\UsersController::class, 'index'])->name('users');
 
+Route::get('/journal', [App\Http\Controllers\UsersController::class, 'journal'])->name('journal');
+
 //Edit artwork request (admin)
 Route::get('/posts/store/{id}', [App\Http\Controllers\PostsController::class, 'edit'])->name('posts.edit');
 Route::post('/posts/update/', [App\Http\Controllers\PostsController::class, 'update'])->name('posts.update');

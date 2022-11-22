@@ -34,7 +34,8 @@
                             @endif
 
                             <div>
-                                <a href="{{ route('posts') }}">Posts</a>
+                                <a href="{{ route('posts') }}">Posts</a><br>
+                                <a href="{{ route('journal') }}">Go to journal list</a>
                             </div>
 
 

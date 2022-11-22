@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
+use Carbon\Carbon;
 
 
 use App\Models\Users;
@@ -27,6 +28,11 @@ class UsersController extends Controller
 
     public function delete(){
         return view('users.create');
+    }
+
+    public function journal(){
+        $mytime = Carbon::today();
+        return view('users.journal', compact('mytime'));
     }
 
 //    public function store(Request $request){
