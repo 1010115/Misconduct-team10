@@ -11,8 +11,8 @@
         <h2>Hoi {{$user->name}} </h2>
     @endforeach
     <div class="link-buttons">
-        <a href="/melden.php">
-            <button type="button"> MELDEN</button>
+        <a href="{{ route('journal') }}">
+            <button type="button"> JOURNAL</button>
         </a>
         <a href="/inbox.php">
             <button type="button"> INBOX</button>
