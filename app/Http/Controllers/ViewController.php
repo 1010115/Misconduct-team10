@@ -29,8 +29,9 @@ class ViewController extends Controller
 //    public function delete(){
 //        return view('users.create');
 //    }
-
-
+    public function homePage() {
+        return view('homePage');
+    }
 
     public function store(Request $request){
         //$data = $request->except('_method', 'token', 'submit');
