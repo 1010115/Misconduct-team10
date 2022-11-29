@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
-use App\Models\Artwork;
+use App\Models\Message;
 
 class ArtworkController extends Controller
 {
@@ -39,7 +39,7 @@ class ArtworkController extends Controller
             $request->file->store('product', 'public');
 
             // Store the record, using the new file hashname which will be it's new filename identity.
-            $posts = new Artwork([
+            $posts = new Message([
                 "name" => $request->get('name'),
                 "file_path" => $request->file->hashName(),
             ]);
@@ -48,7 +48,7 @@ class ArtworkController extends Controller
         }
 
         return view('users.artwork')
-        ->with('success','Artwork request was created successfully.');
+        ->with('success','Message request was created successfully.');
 
     }
 }

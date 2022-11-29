@@ -14,10 +14,10 @@ return new class extends Migration
 
     public function up()
     {
-        Schema::create('artworks', function (Blueprint $table) {
+        Schema::create('messages', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->float('file_path');
+            $table->float('text');
             $table->timestamps();
         });
 
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('artworks');
+        Schema::dropIfExists('messages');
     }
 };

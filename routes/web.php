@@ -39,8 +39,8 @@ Route::get('/view', [App\Http\Controllers\UsersController::class, 'view'])->name
 
 
 //Create artwork posts (admin)
-Route::get('/artwork-upload', [App\Http\Controllers\ArtworkController::class, 'index'])->name('artwork');
-Route::post('/artwork-upload', [ App\Http\Controllers\ArtworkController::class, 'store'])->name('artwork.store');
+Route::get('/message-upload', [App\Http\Controllers\ArtworkController::class, 'index'])->name('message');
+Route::post('/message-upload', [ App\Http\Controllers\ArtworkController::class, 'store'])->name('message.store');
 
 //Post gallery
 Route::get('/posts', [App\Http\Controllers\PostsController::class, 'index'])->name('posts');

@@ -38,7 +38,7 @@
 {{--        <!-- Add CSRF Token -->--}}
 {{--        @csrf--}}
 {{--        <div class="form-group">--}}
-{{--            <label>Artwork Name</label>--}}
+{{--            <label>Message Name</label>--}}
 {{--            <input type="text" class="form-control" name="title" required>--}}
 {{--        </div>--}}
 {{--        <div class="form-group">--}}

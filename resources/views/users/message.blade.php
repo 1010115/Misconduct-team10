@@ -33,15 +33,12 @@
                     <a class="btn btn-primary" href="{{ route('home') }}"> Back</a>
                 </div>
 
-                <form action="{{ route('artwork.store') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('message.store') }}" method="post" enctype="multipart/form-data">
                     <!-- Add CSRF Token -->
                     @csrf
                     <div class="form-group">
-                        <label>Artwork Name</label>
+                        <label>message</label>
                         <input type="text" class="form-control" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <input class="btn btn-primary" type="file" name="file" required>
                     </div>
                     <button class="btn btn-primary" type="submit">Submit</button>
                 </form>
