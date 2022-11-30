@@ -30,7 +30,8 @@ class ViewController extends Controller
 //        return view('users.create');
 //    }
     public function homePage() {
-        return view('homePage');
+        $users = Users::select('id', 'name', 'email')->get();
+        return view('homePage', compact('users'));
     }
 
     public function store(Request $request){
