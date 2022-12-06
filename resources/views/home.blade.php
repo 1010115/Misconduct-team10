@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Art Gallery') }}</div>
+                    <div class="card-header">{{ __('Home') }}</div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -16,25 +16,25 @@
                         @endif
                         {{ __('You are logged in!') }}
 
-                            @if (Auth::user() && Auth::user()->role == 'admin')
+{{--                            @if (Auth::user() && Auth::user()->role == 'admin')--}}
                             <div>
                         <a href="{{ route('users') }}">Go to user list</a>
                             </div>
-                            @endif
+{{--                            @endif--}}
 
 {{--                            <div>--}}
 {{--                            <a href="{{ route('create') }}">Make request</a>--}}
 {{--                            </div>--}}
 
-                            @if (Auth::user() && Auth::user()->role == 'admin')
+{{--                            @if (Auth::user() && Auth::user()->role == 'admin')--}}
 
                             <div>
-                                <a href="{{ route('artwork') }}">Upload art</a>
+                                <a href="{{ route('message') }}">Messages</a>
                             </div>
-                            @endif
+{{--                            @endif--}}
 
                             <div>
-                                <a href="{{ route('posts') }}">Posts</a><br>
+                                <a href="{{ route('inbox') }}">Inbox</a><br>
                                 <a href="{{ route('journal') }}">Go to journal list</a>
                             </div>
 

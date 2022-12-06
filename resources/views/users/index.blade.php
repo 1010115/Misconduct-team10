@@ -3,8 +3,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            @if (Auth::user() && Auth::user()->role == 'admin')
-                <div>'THIS IS WHAT I WANT ONLY ADMIN USERS TO SEE!'</div>
+{{--            @if (Auth::user() && Auth::user()->role == 'admin')--}}
+{{--                <div>'THIS IS WHAT I WANT ONLY ADMIN USERS TO SEE!'</div>--}}
             <div class="card">
                 <div class="card-header">{{ __('User Requests') }}</div>
                 <div class="card-body">
@@ -28,12 +28,9 @@
                     <td>{{$user->name}}</td>
                     <td>{{$user->email}}</td>
                     <td>
-                        <a class="btn btn-primary" href="{{ route('view') }}">View request</a>
-
-
 {{--                        <a href="{{ route('edit') }}">Edit request</a>--}}
 
-                        <a class="btn btn-primary" href="{{ route('posts.delete', [$user->id]) }}">Delete</a>
+                        <a class="btn btn-primary" href="{{ route('inbox.delete', [$user->id]) }}">Delete</a>
                     </td>
                 </tr>
             @endforeach
@@ -43,6 +40,6 @@
         </table>
     </div>
 
-@endif
+{{--@endif--}}
 
 @endsection

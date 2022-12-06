@@ -10,7 +10,7 @@
     <div class="panel panel-primary">
 
         <div class="panel-heading">
-            <h2>Artwork Upload</h2>
+            <h2>Inbox</h2>
         </div>
 
         <div class="panel-body">
@@ -37,8 +37,12 @@
                     <!-- Add CSRF Token -->
                     @csrf
                     <div class="form-group">
-                        <label>message</label>
+                        <label>Name</label>
                         <input type="text" class="form-control" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <input type="text" class="form-control" name="text" required>
                     </div>
                     <button class="btn btn-primary" type="submit">Submit</button>
                 </form>
@@ -46,6 +50,8 @@
 
             </div>
             </body>
+
+
 
 @endsection
 

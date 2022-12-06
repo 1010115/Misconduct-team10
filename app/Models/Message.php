@@ -16,16 +16,6 @@ class Message extends Model
 
 
 //info
-    public function up()
-    {
-        Schema::create('messages', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('text');
-            $table->timestamps();
-        });
-    }
-
     protected $fillable = ["name", "text", "created_at", "updated_at"];
 }
 
