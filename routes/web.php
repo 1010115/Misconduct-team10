@@ -20,6 +20,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/editProfile', [App\Http\Controllers\ViewController::class,'editProfile'])->name('editProfile');
+
+Route::get('/profile',[App\Http\Controllers\ViewController::class,'profile'] );
+
 Route::get('/homepage',[App\Http\Controllers\ViewController::class, 'homePage']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

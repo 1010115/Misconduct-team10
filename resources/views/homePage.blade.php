@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
 <meta charset="UTF-8">
 <title>Home</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="/app.css">
+<link rel="stylesheet" href="/homePage.css">
+</head>
 <body>
 
 <div class="body">
-<<<<<<< Updated upstream
     @foreach($users as $user)
         <h2>Hoi {{$user->name}} </h2>
     @endforeach
@@ -22,9 +23,9 @@
 
     <h2> Hoe gaat het vandaag?</h2>
     <div class="response-buttons">
-        <button> Goed!</button>
-        <button> Niet zo</button>
-        <button> Weet ik niet</button>
+        <button type="button"> Goed!</button>
+        <button type="button"> Niet zo</button>
+        <button type="button"> Weet ik niet</button>
     </div>
 
     <div class="articles">
@@ -39,33 +40,6 @@
         </article>
 
     </div>
-=======
-
-<h2>Hoi {$name} </h2>
-
-<div class= "link-buttons">
-<a href="/melden.php"><button type="button"> MELDEN </button></a>
-<a href="/inbox.php"><button type="button"> INBOX </button></a>
-</div>
-
-<h2> Hoe gaat het vandaag?</h2>
-<div class="response-buttons">
-<button> Goed!</button>
-<button> Niet zo</button>
-<button> Weet ik niet </button>
-</div>
-
-<div class"articles">
-    <a href="/article.php">
-    <article>
-    <img >
-    <h1>Lorem ipsum </h1>
-    </article>
-    </a>
-
-
-</div>
->>>>>>> Stashed changes
 
 </div>
 

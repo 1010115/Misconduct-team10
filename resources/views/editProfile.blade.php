@@ -13,7 +13,6 @@
         <p>{{$user->email}}</p>
 @endforeach
 
-<p>verander wachtwoord</p>
-<a href="{{ route('editProfile')}}">Verander gegevens</a>
+<button type="submit">Submit</button>
 
 </body>
