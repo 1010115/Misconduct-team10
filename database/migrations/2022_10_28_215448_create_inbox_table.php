@@ -11,16 +11,14 @@ return new class extends Migration
      *
      * @return void
      */
-
     public function up()
     {
-        Schema::create('artworks', function (Blueprint $table) {
+        Schema::create('inbox', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->float('file_path');
+            $table->string('text');
             $table->timestamps();
         });
-
     }
 
     /**
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('artworks');
+        Schema::dropIfExists('inbox');
     }
 };

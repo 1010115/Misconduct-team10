@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
-use App\Models\Artwork;
+use App\Models\Message;
 
-class ArtworkController extends Controller
+class MessageController extends Controller
 {
+
     public function index()
     {
-        return view('users.artwork');
-
+        return view('users.message');
     }
 
 
@@ -29,26 +29,26 @@ class ArtworkController extends Controller
 
 
         // ensure the request has a file before we attempt anything else.
-        if ($request->hasFile('file')) {
+        if ($request->hasFile('text')) {
 
             $request->validate([
-                'image' => 'mimes:jpeg,bmp,png' // Only allow .jpg, .bmp and .png file types.
+                'text' => '' // Only allow .jpg, .bmp and .png file types.
             ]);
 
             // Save the file locally in the storage/public/ folder under a new folder named /product
-            $request->file->store('product', 'public');
+//            $request->text->store('product', 'public');
 
             // Store the record, using the new file hashname which will be it's new filename identity.
-            $posts = new Artwork([
+            $inbox = new Message([
                 "name" => $request->get('name'),
-                "file_path" => $request->file->hashName(),
+                "text" => $request->get('text'),
             ]);
-            $posts->save(); // Finally, save the record.
+            $inbox->save(); // Finally, save the record.
 
         }
 
-        return view('users.artwork')
-        ->with('success','Artwork request was created successfully.');
+        return view('users.message')
+        ->with('success','Message request was created successfully.');
 
     }
 }

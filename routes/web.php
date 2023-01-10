@@ -1,6 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
-use App\Models\Post;
+use App\Models\inbox;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 
+
 Auth::routes();
 
 Route::get('/homepage',[App\Http\Controllers\ViewController::class, 'homePage']);
@@ -31,11 +32,11 @@ Route::get('/create', [App\Http\Controllers\UsersController::class, 'index'])->n
 Route::get('/journal', [App\Http\Controllers\UsersController::class, 'journal'])->name('journal');
 
 //Edit artwork request (admin)
-Route::get('/posts/store/{id}', [App\Http\Controllers\PostsController::class, 'edit'])->name('posts.edit');
-Route::post('/posts/update/', [App\Http\Controllers\PostsController::class, 'update'])->name('posts.update');
+Route::get('/inbox/store/{id}', [App\Http\Controllers\InboxController::class, 'edit'])->name('inbox.edit');
+Route::post('/inbox/update/', [App\Http\Controllers\InboxController::class, 'update'])->name('inbox.update');
 
 //Delete artwork (admin)
-Route::get('/posts/delete/{id}', [App\Http\Controllers\PostsController::class, 'destroy'])->name('posts.delete');
+Route::get('/inbox/delete/{id}', [App\Http\Controllers\InboxController::class, 'destroy'])->name('inbox.delete');
 
 
 //View users (admin)
@@ -43,11 +44,11 @@ Route::get('/view', [App\Http\Controllers\UsersController::class, 'view'])->name
 
 
 //Create artwork posts (admin)
-Route::get('/artwork-upload', [App\Http\Controllers\ArtworkController::class, 'index'])->name('artwork');
-Route::post('/artwork-upload', [ App\Http\Controllers\ArtworkController::class, 'store'])->name('artwork.store');
+Route::get('/message-upload', [App\Http\Controllers\MessageController::class, 'index'])->name('message');
+Route::post('/message-upload', [ App\Http\Controllers\MessageController::class, 'store'])->name('message.store');
 
-//Post gallery
-Route::get('/posts', [App\Http\Controllers\PostsController::class, 'index'])->name('posts');
+//inbox gallery
+Route::get('/inbox', [App\Http\Controllers\InboxController::class, 'index'])->name('inbox');
 
 
 
