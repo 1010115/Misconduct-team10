@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
 <meta charset="UTF-8">
-<title>Page Title</title>
+<title>Home</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="/app.css">
+<link rel="stylesheet" href="/homePage.css">
+</head>
 <body>
 
 <div class="body">
@@ -21,9 +23,9 @@
 
     <h2> Hoe gaat het vandaag?</h2>
     <div class="response-buttons">
-        <button> Goed!</button>
-        <button> Niet zo</button>
-        <button> Weet ik niet</button>
+        <button type="button"> Goed!</button>
+        <button type="button"> Niet zo</button>
+        <button type="button"> Weet ik niet</button>
     </div>
 
     <div class="articles">

@@ -26,6 +26,10 @@ class UsersController extends Controller
         return view('users.create');
     }
 
+    // public function edit('Users $users){
+        
+    // }
+
     public function delete(){
         return view('users.create');
     }

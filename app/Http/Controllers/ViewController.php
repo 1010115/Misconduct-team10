@@ -34,6 +34,16 @@ class ViewController extends Controller
         return view('homePage', compact('users'));
     }
 
+    public function profile() {
+        $users = Users::select('id', 'name', 'email')->get();
+        return view('profile', compact('users'));
+    }
+
+    public function editProfile(){
+        $users = Users::select('id', 'name', 'email','password')->get();
+        return view('editProfile', compact('users'));
+    }
+
     public function store(Request $request){
         //$data = $request->except('_method', 'token', 'submit');
         //validate

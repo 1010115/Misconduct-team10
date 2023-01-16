@@ -73,6 +73,7 @@ div.response-buttons button{
     height: 2em;
     border:1px solid #6b6a6b;
     background-image: linear-gradient(90deg, #e1f3f9 90%, #e2f3f9);
+    margin-bottom: 1em;
 }
 
 article{
@@ -86,8 +87,20 @@ div.articles article{
     flex-direction: row;
 }
 
+article h1 {
+  height: 1em;
+  line-height: 0.5em;
+  text-align: center;
+}
+
 img{
+    margin-left: 1em;
     width: 6em;
     height: 4em;
     background-image: linear-gradient(90deg,#5e80f5 50%,#6185ff);
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
 }
