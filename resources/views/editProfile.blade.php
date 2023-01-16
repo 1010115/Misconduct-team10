@@ -13,6 +13,7 @@
         <p>{{$user->email}}</p>
 @endforeach
 
+
 <button type="submit">Submit</button>
 
 </body>
