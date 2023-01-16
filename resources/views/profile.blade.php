@@ -1,19 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Profile</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="/profile.css">
-</head>
-<body>
+@extends('layouts.app')
 
-@foreach($users as $user)
-        <h1>Welkom {{$user->name}} </h1>
-        <p>{{$user->email}}</p>
-@endforeach
+@section('content')
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">{{ __('Profile') }}</div>
 
-<p>verander wachtwoord</p>
-<a href="{{ route('editProfile')}}">Verander gegevens</a>
+                    <div class="card-body">
+                        @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+                        <table class="table">
 
-</body>
+                            <div class="pull-right">
+                                <a class="btn btn-primary" href="{{ route('home') }}">Back</a>
+                            </div>
+
+                            <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>E-mail</th>
+                                <th>Delete</th>
+                            <tr>
+                            </thead>
+                            <tbody>
+                            @foreach($users as $user)
+                                <tr>
+                                    <td>{{$user->name}}</td>
+                                    <td>{{$user->email}}</td>
+                                    <td>
+                                        <a class="btn btn-primary" href="{{ route('inbox.delete', [$user->id]) }}"
+                                           style="background-color: red;">Delete</a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                        <div class="pull-right">
+                            <a class="btn btn-primary" href="{{ route('editProfile') }}">Profiel veranderen</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+@endsection
